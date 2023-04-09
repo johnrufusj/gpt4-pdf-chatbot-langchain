@@ -27,7 +27,7 @@ export default function Home() {
   }>({
     messages: [
       {
-        message: 'Hi, what would you like to know about emerging technologies?',
+        message: 'Hi there!, ask me anything about emerging technologies!',
         type: 'apiMessage',
       },
     ],

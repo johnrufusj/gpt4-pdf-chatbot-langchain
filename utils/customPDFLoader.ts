@@ -17,7 +17,7 @@ export abstract class BufferLoader extends BaseDocumentLoader {
     let metadata: Record<string, string>;
     if (typeof this.filePathOrBlob === 'string') {
       buffer = await readFile(this.filePathOrBlob);
-      metadata = { source: this.filePathOrBlob };
+      metadata = { source:   this.filePathOrBlob };
     } else {
       buffer = await this.filePathOrBlob
         .arrayBuffer()
@@ -39,7 +39,9 @@ export class CustomPDFLoader extends BufferLoader {
       new Document({
         pageContent: parsed.text,
         metadata: {
-          ...metadata,
+          source: parsed.info.Subject,
+          title: parsed.info.Title,
+          author: parsed.info.Author,
           pdf_numpages: parsed.numpages,
         },
       }),

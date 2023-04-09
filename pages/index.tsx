@@ -13,6 +13,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import { Link } from 'lucide-react';
 
 export default function Home() {
   const [query, setQuery] = useState<string>('');
@@ -234,6 +235,12 @@ export default function Home() {
                                     </ReactMarkdown>
                                     <p className="mt-2">
                                       <b>Source:</b> {doc.metadata.source}
+                                    </p>
+                                    <p className="mt-2">
+                                      <b>Title:</b> {doc.metadata.title}
+                                    </p>
+                                    <p className="mt-2">
+                                      <b>Author:</b> {doc.metadata.author}
                                     </p>
                                   </AccordionContent>
                                 </AccordionItem>

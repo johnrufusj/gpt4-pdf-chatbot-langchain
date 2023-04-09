@@ -234,7 +234,7 @@ export default function Home() {
                                       {doc.pageContent}
                                     </ReactMarkdown>
                                     <p className="mt-2">
-                                      <b>Source:</b> {doc.metadata.source}
+                                      <b>Source:</b><a target="_new" href ={doc.metadata.source}> {doc.metadata.source}</a>
                                     </p>
                                     <p className="mt-2">
                                       <b>Title:</b> {doc.metadata.title}
